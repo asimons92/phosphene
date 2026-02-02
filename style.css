@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Basteleur-Moonlight'; /* You can name this whatever you want */
+    src: url('fonts/basteleur-master/fonts/webfonts/Basteleur-Moonlight.woff2') format('woff2'),
+         url('fonts/basteleur-master/fonts/webfonts/Basteleur-Moonlight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* This ensures text shows up while the font loads */
+  }
+
+
+
+
+body::after {
+    content: "";
+    position: fixed;
+    top: -150%;
+    left: -150%;
+    width: 300%;
+    height: 300%;
+    /* Replace with a tiny noise png or a high-contrast noise data URI */
+    background-image: url(images/nnnoise.svg);
+    opacity: 0.15; /* Keep it subtle */
+    pointer-events: none;
+    animation: grain 8s steps(10) infinite;
+    z-index: 9999;
+  }
+
+  @keyframes grain {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -10%); }
+    30% { transform: translate(-15%, 5%); }
+    50% { transform: translate(7%, 9%); }
+    80% { transform: translate(3%, -15%); }
+  }
+
+html {
+    color: #fff !important;
+}
+
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Basteleur-Moonlight', sans-serif;
+}
+
+p {
+    color: #fff;
+    font-family: 'Basteleur-Moonlight', sans-serif;
+}
+
+a {
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 0.25rem;
+}
+
+.header-title {
+    font-family: 'Basteleur-Moonlight', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 0.25rem;
+}
+
+.band-photos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.band-photo {
+    filter: contrast(150%) grayscale(100%) brightness(110%);
+    image-rendering: pixelated; /* Keeps it sharp, not blurry */
+    padding: 0 1rem;
+
+  }
+
+  #grant {
+    filter: contrast(300%) grayscale(100%) brightness(110%);
+  }
+  #tony {
+    filter: contrast(90%) grayscale(100%) brightness(110%);
+  }
+
+  .credits {
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.25rem;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about li {
+    color: #fff;
+    font-family: 'Basteleur-Moonlight', sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 0.25rem;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-img {
+    max-width: 300px;
+    height: auto;
+}

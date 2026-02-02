@@ -1,0 +1,6 @@
+# Font files not needed for the website
+fonts/basteleur-master.zip
+fonts/basteleur-master/documentation/
+fonts/basteleur-master/sources/
+fonts/basteleur-master/fonts/otf/
+fonts/basteleur-master/fonts/ttf/
