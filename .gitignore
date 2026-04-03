@@ -5,3 +5,10 @@ fonts/basteleur-master/sources/
 fonts/basteleur-master/fonts/otf/
 fonts/basteleur-master/fonts/ttf/
 template.html
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
