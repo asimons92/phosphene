@@ -186,6 +186,49 @@ a {
     padding: 0 1rem;
 }
 
+.shows {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 0.25rem;
+}
+
+.show {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.show-flyer-link {
+    flex: 0 0 auto;
+}
+
+.show-flyer {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+}
+
+.show-details p {
+    margin: 0 0 0.75rem;
+}
+
+.show-date {
+    font-size: 1.5rem;
+}
+
+.show-lineup {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+}
+
+.show-lineup li {
+    color: #fff;
+    font-family: 'Basteleur-Moonlight', sans-serif;
+}
+
 @media (max-width: 640px) {
     .links {
         justify-content: center;
@@ -228,6 +271,17 @@ a {
 
     .contact-img {
         max-width: min(300px, 100%);
+    }
+
+    .show {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .show-flyer {
+        width: min(360px, 100%);
     }
 
     .header-title {
